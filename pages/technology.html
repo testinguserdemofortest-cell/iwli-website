@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="../css/styles.css"/>
+<title>IWLI Technology - Industrial Scale Infrastructure</title>
+</head>
+<body>
+<!-- NAV -->
+<nav>
+<span class="nav-logo">IWLI</span>
+<button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
+<ul class="nav-links">
+<li><a href="index.html">Home</a></li>
+<li><a href="features.html">Features</a></li>
+<li><a href="how-it-works.html">How It Works</a></li>
+<li><a href="waste-types.html">Waste Types</a></li>
+<li><a href="#technology">Technology</a></li>
+<li><a href="impact.html">Impact</a></li>
+<li><a href="compliance.html">Compliance</a></li>
+<li><a href="use-cases.html">Use Cases</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</nav>
+
+<canvas id="particles-canvas"></canvas>
+
+<section id="technology">
+<div class="section-header reveal">
+<span class="section-tag">Technology Stack</span>
+<h2>Built for Industrial Scale</h2>
+<p class="section-desc">Production-grade infrastructure with AI, IoT, and cloud-native architecture ready for enterprise deployment.</p>
+</div>
+<div class="tech-grid">
+<div class="tech-card reveal">
+<span class="tech-badge badge-ai">AI/ML</span>
+<h3>Visual Waste Recognition</h3>
+<p>Camera-based waste image analysis to assist composition detection, contamination flags, and category tagging; currently in pilot deployments.</p>
+</div>
+<div class="tech-card reveal">
+<span class="tech-badge badge-iot">IoT</span>
+<h3>Sensor Analysis Network</h3>
+<p>Multi-parameter monitoring: weight, density, temperature, humidity, gas levels. Simulated and live sensor modes with automatic alert triggers.</p>
+</div>
+<div class="tech-card reveal">
+<span class="tech-badge badge-route">Route AI</span>
+<h3>4-Algorithm Optimization</h3>
+<p>Nearest Neighbor, Genetic Algorithm, Ant Colony Optimization, and Simulated Annealing — automatically selecting the best strategy for each route.</p>
+</div>
+<div class="tech-card reveal">
+<span class="tech-badge badge-cloud">Cloud</span>
+<h3>Scalable API Architecture</h3>
+<p>46+ REST endpoints with JWT security, multi-tenancy, rate limiting, and role-based access. WebSocket-ready for real-time dashboard updates.</p>
+</div>
+<div class="tech-card reveal">
+<span class="tech-badge badge-ai">Analytics</span>
+<h3>Predictive Intelligence</h3>
+<p>Forecast pickup schedules, predict cost savings, detect contamination patterns, and surface market opportunities from historical data.</p>
+</div>
+<div class="tech-card reveal">
+<span class="tech-badge badge-iot">Geospatial</span>
+<h3>Live Fleet Tracking</h3>
+<p>Real-time map visualization of all trucks, stations, and routes. Geospatial queries for nearby stations and optimal pickup clustering.</p>
+</div>
+</div>
+</section>
+
+<script src="../js/script.js"></script>
+</body>
+</html>

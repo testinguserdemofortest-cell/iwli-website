@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="../css/styles.css"/>
+<title>IWLI Contact - Book Demo & Get Started</title>
+</head>
+<body>
+<!-- NAV -->
+<nav>
+<span class="nav-logo">IWLI</span>
+<button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
+<ul class="nav-links">
+<li><a href="index.html">Home</a></li>
+<li><a href="features.html">Features</a></li>
+<li><a href="how-it-works.html">How It Works</a></li>
+<li><a href="waste-types.html">Waste Types</a></li>
+<li><a href="technology.html">Technology</a></li>
+<li><a href="impact.html">Impact</a></li>
+<li><a href="compliance.html">Compliance</a></li>
+<li><a href="use-cases.html">Use Cases</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+
+<canvas id="particles-canvas"></canvas>
+
+<section id="contact">
+<div class="section-header reveal">
+<span class="section-tag">Contact</span>
+<h2>Ready to Transform Your Waste Operations?</h2>
+<p class="section-desc">Book a demo and see how IWLI can reduce costs, ensure compliance, and cut your carbon footprint — starting in 90 days.</p>
+</div>
+<form class="cta-form reveal" id="demo-form" method="POST" action="https://formspree.io/f/xwvawzqw">
+<input class="cta-input" type="text" name="name" placeholder="Your Name" required />
+<input class="cta-input" type="email" name="email" placeholder="komaljangra065r@gmail.com" required />
+<button type="submit" class="btn-primary">Book Demo 🚀</button>
+</form>
+<div id="form-status" style="font-size:0.78rem;color:var(--text-muted);margin-top:1rem;display:none;"></div>
+<p style="font-size:0.9rem;color:var(--text-muted);margin-top:2rem;font-family:'Inter',sans-serif;">
+📧 Email: komaljangra065r@gmail.com
+</p>
+</section>
+
+<script src="../js/script.js"></script>
+<script>
+document.getElementById('demo-form')?.addEventListener('submit', function (e) {
+  const statusDiv = document.getElementById('form-status');
+  statusDiv.style.display = 'block';
+  statusDiv.textContent = 'Sending...';
+});
+</script>
+</body>
+</html>

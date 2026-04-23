@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <!-- SEO Meta Tags -->
+    <title>IWLI – Industrial Waste Ledger & Intelligence | India's Smart Waste Management</title>
+    <meta name="description"
+        content="IWLI retrofits factory bins with IoT sensors and AI cameras for smart waste segregation, demand-driven collection, and blockchain-grade compliance across India's manufacturing clusters." />
+    <meta name="keywords"
+        content="waste management, IoT sensors, AI, industrial waste, India, compliance, sustainability, blockchain" />
+    <meta name="author" content="IWLI Team" />
+    <meta name="theme-color" content="#0a0e17" />
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://iwli.ai/" />
+    <meta property="og:title" content="IWLI – Industrial Waste Ledger & Intelligence" />
+    <meta property="og:description"
+        content="Smart waste segregation, demand-driven collection, and blockchain-grade compliance for India's factories." />
+    <meta property="og:image" content="https://iwli.ai/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:site_name" content="IWLI" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter Card -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://iwli.ai/" />
+    <meta property="twitter:title" content="IWLI – Industrial Waste Ledger & Intelligence" />
+    <meta property="twitter:description"
+        content="India's smart waste management platform with IoT and AI Visual Auditor." />
+    <meta property="twitter:image" content="https://iwli.ai/og-image.jpg" />
+
+    <!-- Security & Performance -->
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <link rel="canonical" href="https://iwli.ai/" />
+
+    <!-- Preconnect for Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="dns-prefetch" href="https://formspree.io" />
+
+    <!-- Fonts with Font Display Swap for Performance -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <style>
+        #robot-assistant {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 999;
+        }
+
+        #robot-button {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: none;
+            background: linear-gradient(135deg, var(--neon-green), var(--neon-blue));
+            font-size: 30px;
+            cursor: pointer;
+            box-shadow: 0 0 20px rgba(0, 255, 136, 0.4);
+            transition: transform 0.2s;
+        }
+
+        #robot-button:hover {
+            transform: scale(1.1);
+        }
+
+        #robot-panel {
+            display: none;
+            position: absolute;
+            bottom: 80px;
+            right: 0;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 20px;
+            width: 280px;
+            color: var(--text-primary);
+        }
+
+        #robot-panel.show {
+            display: block;
+            animation: slideUp 0.3s ease;
+        }
+
+        #robot-panel h4 {
+            color: var(--neon-green);
+            margin-bottom: 10px;
+        }
+
+        #robot-panel ul {
+            list-style: none;
+            margin: 15px 0;
+            font-size: 0.9rem;
+        }
+
+        #robot-panel li {
+            padding: 5px 0;
+            color: var(--text-muted);
+        }
+
+        #robot-close {
+            background: var(--neon-blue);
+            color: #0a0e17;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- NAV -->
+    <nav>
+        <span class="nav-logo">IWLI</span>
+        <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
+        <ul class="nav-links">
+            <li><a href="#features">Features</a></li>
+            <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="#waste-types">Waste Types</a></li>
+            <li><a href="#technology">Technology</a></li>
+            <li><a href="#impact">Impact</a></li>
+            <li><a href="#use-cases">Use Cases</a></li>
+            <li><a href="#cta" class="nav-cta">Book Demo</a></li>
+        </ul>
+    </nav>
+
+    <!-- HERO -->
+    <section id="hero">
+        <div>
+            <h1 class="hero-title glitch">
+                <span class="glitch-layer" data-text="India's Waste">India's Waste</span><br />
+                <span class="glitch-layer accent-green" data-text="Problem">Problem</span> Gets a<br />
+                <span class="glitch-layer accent-blue" data-text="Digital Brain">Digital Brain</span>
+            </h1>
+            <span class="hero-badge">Industrial Waste Ledger & Intelligence</span>
+            <p class="hero-sub">
+                IWLI retrofits factory bins with low-cost IoT sensors and AI Visual Auditor cameras — enabling smart
+                segregation at source, demand-driven collection, and blockchain-grade compliance across India's
+                manufacturing clusters.
+            </p>
+            <p style="font-size: 0.9rem; color: var(--text-muted); margin: 12px 0;">Currently piloting with early-adopter factories in India.</p>
+            <div class="hero-buttons">
+                <a href="#cta" class="btn-primary">🚀 Book a Demo</a>
+                <a href="#features" class="btn-outline">Explore Features</a>
+            </div>
+
+                <div class="hero-stats">
+                    <div class="stat">
+                        <div class="stat-number">Dozens of</div>
+                        <div class="stat-label">Integrations & Data Connectors</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">AI‑powered</div>
+                        <div class="stat-label">Analytics & Forecasting</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">100 %</div>
+                        <div class="stat-label">Compliance Reporting</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">Dozens of</div>
+                        <div class="stat-label">Secured API Endpoints</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">🤖</div>
+                        <div class="stat-label">Autonomous Sorting & Classification</div>
+                    </div>
+                </div>
+        </div>
+    </section>
+
+    <!-- BEFORE VS AFTER -->
+    <section id="before-after">
+        <div class="section-header reveal">
+            <span class="section-tag">Transformation</span>
+            <h2>From scattered registers to a single waste ledger</h2>
+        </div>
+        <div class="before-after-grid">
+            <div class="before-card reveal">
+                <div class="before-after-badge before-badge">Before IWLI</div>
+                <h3>Manual, scattered, reactive</h3>
+                <ul>
+                    <li>Paper registers in multiple departments, inconsistent formats, and missing entries when staff change.</li>
+                    <li>Excel files saved in personal laptops with no single source of truth for quantities and categories.</li>
+                    <li>Chasing vendors for disposal certificates and manifests just before audits or inspections.</li>
+                    <li>No easy way to see abnormal waste patterns or link lots back to the exact shopfloor source.</li>
+                </ul>
+            </div>
+            <div class="after-card reveal">
+                <div class="before-after-badge after-badge">With IWLI</div>
+                <h3>Digital, traceable, audit-ready</h3>
+                <ul>
+                    <li>Every kilo of waste logged in a digital ledger with category, source, and lot ID.</li>
+                    <li>All manifests, gate passes, and disposal certificates stored against each movement, searchable in seconds.</li>
+                    <li>Live view of what is lying where – bins, storage areas, vehicles, recyclers – with status.</li>
+                    <li>Alerts for missing records, expiring consents, and unusual quantities before inspections.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="persona-grid">
+            <div class="persona-card reveal">
+                <div class="persona-icon">🛡️</div>
+                <h4>EHS Manager</h4>
+                <div class="persona-before">
+                    <strong>Before:</strong> Maintains separate registers and trackers for hazardous, non-hazardous, and recyclables, spends evenings preparing board formats.
+                </div>
+                <div class="persona-after">
+                    <strong>After:</strong> Monitors all streams in one ledger and exports board-ready reports in a few clicks.
+                </div>
+            </div>
+            <div class="persona-card reveal">
+                <div class="persona-icon">🏭</div>
+                <h4>Plant Head / Operations</h4>
+                <div class="persona-before">
+                    <strong>Before:</strong> Waste is only visible at audit time; no continuous view of leakages or abnormal lots.
+                </div>
+                <div class="persona-after">
+                    <strong>After:</strong> Gets a cockpit view of waste volumes, hotspots, and vendor performance.
+                </div>
+            </div>
+            <div class="persona-card reveal">
+                <div class="persona-icon">♻️</div>
+                <h4>Recycler / TSDF</h4>
+                <div class="persona-before">
+                    <strong>Before:</strong> Receives manual manifests and ad hoc quantity updates from plants.
+                </div>
+                <div class="persona-after">
+                    <strong>After:</strong> Receives structured digital dispatch data and can issue certificates linked to exact lots.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section id="features">
+        <div class="section-header reveal">
+            <span class="section-tag">Core Features</span>
+            <h2>Everything Your Factory Needs</h2>
+            <p class="section-desc">From real-time sensor data to AI-powered recommendations — a complete waste
+                intelligence platform for industrial operations.</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card reveal">
+                <span class="feature-icon">📊</span>
+                <h3>Real-Time Analytics Dashboard</h3>
+                <p>Live KPIs, fill levels, purity scores, contamination counts, and cost savings — all updated in
+                    real-time across your entire facility.</p>
+            </div>
+            <div class="feature-card reveal">
+                <span class="feature-icon">🤖</span>
+                <h3>OpenAI GPT-4 Integration</h3>
+                <p>AI-powered waste analysis and recommendations. Detect contamination types, forecast pickup needs, and
+                    optimize cost savings automatically.</p>
+            </div>
+            <div class="feature-card reveal">
+                <span class="feature-icon">📡</span>
+                <h3>IoT Sensor Monitoring</h3>
+                <p>Real-time data from bin sensors — fill level, weight, temperature, humidity, contamination detection,
+                    and purity scoring.</p>
+            </div>
+            <div class="feature-card reveal">
+                <span class="feature-icon">⚠️</span>
+                <h3>Smart Alerts System</h3>
+                <p>Automated alerts for overfill (&gt;90%), contamination, temperature spikes, hazardous gas levels, and
+                    maintenance requirements.</p>
+            </div>
+            <div class="feature-card reveal">
+                <span class="feature-icon">🗺️</span>
+                <h3>Fleet & Route Optimization</h3>
+                <p>Live truck tracking with 4 optimization algorithms — Nearest Neighbor, Genetic, Ant Colony, and
+                    Simulated Annealing — to minimize fuel and carbon footprint.</p>
+            </div>
+            <div class="feature-card reveal">
+                <span class="feature-icon">📋</span>
+                <h3>Compliance Reporting</h3>
+                <p>Automated CPCB/SPCB quarterly reports, ESG metrics dashboard, waste audit scores, and export-ready
+                    documentation for regulators.</p>
+            </div>
+            <div class="feature-card reveal">
+                <span class="feature-icon">🏭</span>
+                <h3>Multi-Factory Management</h3>
+                <p>Manage multiple sites from a single platform. Factory-level data isolation, user management, and
+                    cross-site performance comparisons.</p>
+            </div>
+            <div class="feature-card reveal">
+                <span class="feature-icon">🌱</span>
+                <h3>Environmental Impact Tracking</h3>
+                <p>Measure CO₂ reductions, total waste recycled, and cost savings over time. Generate ESG-ready reports
+                    for investors and stakeholders.</p>
+            </div>
+            <div class="feature-card reveal">
+                <span class="feature-icon">🔐</span>
+                <h3>Enterprise Security</h3>
+                <p>JWT authentication, bcrypt password hashing, rate limiting, CORS, Helmet security headers, and
+                    role-based access control built in.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section id="how-it-works">
+        <div class="section-header reveal">
+            <span class="section-tag">Process</span>
+            <h2>How IWLI Works</h2>
+            <p class="section-desc">A seamless end-to-end workflow from sensor data collection to compliance reporting.
+            </p>
+        </div>
+        <div class="steps">
+            <div class="step reveal">
+                <div class="step-num">01</div>
+                <div>
+                    <h3>IoT Sensors Collect Data</h3>
+                    <p>Smart sensors on industrial bins continuously monitor fill levels, weight, temperature, humidity,
+                        and contamination. Data is streamed to the IWLI platform in near real-time (configurable, e.g. every 30–60 seconds).</p>
+                </div>
+            </div>
+            <div class="step reveal">
+                <div class="step-num">02</div>
+                <div>
+                    <h3>AI Classifies & Analyzes</h3>
+                    <p>The OpenAI-powered engine classifies waste types (Hazardous, Industrial, Organic), detects
+                        contamination, calculates purity scores, and generates actionable recommendations for your
+                        operations team.</p>
+                </div>
+            </div>
+            <div class="step reveal">
+                <div class="step-num">03</div>
+                <div>
+                    <h3>Alerts Are Generated Automatically</h3>
+                    <p>When thresholds are crossed — overfill, contamination, temperature or gas anomalies — the system
+                        generates severity-graded alerts (Low, Medium, High, Critical) and notifies the right personnel
+                        instantly.</p>
+                </div>
+            </div>
+            <div class="step reveal">
+                <div class="step-num">04</div>
+                <div>
+                    <h3>Routes Are Optimized</h3>
+                    <p>Pickup routes for waste collection trucks are automatically optimized using advanced algorithms.
+                        The system tracks live fleet positions, calculates CO₂ savings, and logs distance and fuel
+                        efficiency per route.</p>
+                </div>
+            </div>
+            <div class="step reveal">
+                <div class="step-num">05</div>
+                <div>
+                    <h3>Reports Are Generated</h3>
+                    <p>Compliance documents for CPCB/SPCB regulators, ESG impact reports, and ROI summaries are
+                        generated automatically — ready to export as CSV or PDF at any time.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WASTE TYPES -->
+    <section id="waste-types">
+        <div class="section-header reveal">
+            <span class="section-tag">Classification</span>
+            <h2>Industrial Waste Classification</h2>
+            <p class="section-desc">IWLI's AI engine identifies and manages all 11+ industrial waste types across three
+                major categories.</p>
+        </div>
+        <div class="waste-grid">
+            <div class="waste-card reveal">
+                <div class="waste-category cat-hazardous">⚠ Hazardous</div>
+                <h4>Chemical Waste</h4>
+                <p>Solvents, acids, bases, and reactive compounds requiring special handling and disposal protocols.</p>
+            </div>
+            <div class="waste-card reveal">
+                <div class="waste-category cat-hazardous">⚠ Hazardous</div>
+                <h4>Electronic Waste</h4>
+                <p>Circuit boards, batteries, and electronic components with heavy metals and toxic materials.</p>
+            </div>
+            <div class="waste-card reveal">
+                <div class="waste-category cat-hazardous">⚠ Hazardous</div>
+                <h4>Radioactive Waste</h4>
+                <p>Low and medium-level radioactive materials from industrial processes, tracked with strict compliance.
+                </p>
+            </div>
+            <div class="waste-card reveal">
+                <div class="waste-category cat-industrial">◈ Industrial</div>
+                <h4>Scrap Metal</h4>
+                <p>Ferrous and non-ferrous metals with real-time market rate tracking and buyer matching.</p>
+            </div>
+            <div class="waste-card reveal">
+                <div class="waste-category cat-industrial">◈ Industrial</div>
+                <h4>Packaging Waste</h4>
+                <p>Plastics, cardboard, and composite packaging materials classified for recycling or disposal.</p>
+            </div>
+            <div class="waste-card reveal">
+                <div class="waste-category cat-industrial">◈ Industrial</div>
+                <h4>Construction Debris</h4>
+                <p>Concrete, brick, tiles, and demolition materials handled with compliant disposal routing.</p>
+            </div>
+            <div class="waste-card reveal">
+                <div class="waste-category cat-industrial">◈ Industrial</div>
+                <h4>Textile & Wood</h4>
+                <p>Industrial offcuts and fabric waste from manufacturing tracked for recycling and energy recovery.</p>
+            </div>
+            <div class="waste-card reveal">
+                <div class="waste-category cat-organic">✦ Organic</div>
+                <h4>Food & Organic</h4>
+                <p>Biodegradable waste from processing facilities, routed for composting or biogas conversion.</p>
+            </div>
+            <div class="waste-card reveal">
+                <div class="waste-category cat-organic">✦ Organic</div>
+                <h4>Recyclable Materials</h4>
+                <p>Mixed recyclables sorted and tracked by material composition and market value.</p>
+            </div>
+            <div class="waste-card reveal">
+                <div class="waste-category cat-organic">✦ Organic</div>
+                <h4>Composite Waste</h4>
+                <p>Multi-material items requiring pre-processing before recycling or certified disposal.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- IMPACT -->
+    <section id="impact">
+        <div class="section-header reveal">
+            <span class="section-tag">Environmental Impact</span>
+            <h2>Measurable Results</h2>
+            <p class="section-desc">Every factory on IWLI generates verifiable environmental and financial outcomes
+                tracked in real-time.</p>
+        </div>
+        <div class="impact-grid">
+            <div class="impact-card reveal">
+                <div class="impact-number">10–25<span class="impact-unit">%</span></div>
+                <div class="impact-label">CO₂ Reduction Per Optimized Route (Potential)</div>
+            </div>
+            <div class="impact-card reveal">
+                <div class="impact-number">5–20<span class="impact-unit">%</span></div>
+                <div class="impact-label">Fuel Savings Per Route After Optimization</div>
+            </div>
+            <div class="impact-card reveal">
+                <div class="impact-number">3–6<span class="impact-unit">mo</span></div>
+                <div class="impact-label">Typical Pilot ROI Horizon</div>
+            </div>
+            <div class="impact-card reveal">
+                <div class="impact-number">80–90<span class="impact-unit">%</span></div>
+                <div class="impact-label">Compliance Workflow Coverage</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TECHNOLOGY -->
+    <section id="technology">
+        <div class="section-header reveal">
+            <span class="section-tag">Technology Stack</span>
+            <h2>Built for Industrial Scale</h2>
+            <p class="section-desc">Production-grade infrastructure with AI, IoT, and cloud-native architecture ready
+                for enterprise deployment.</p>
+        </div>
+        <div class="tech-grid">
+            <div class="tech-card reveal">
+                <span class="tech-badge badge-ai">AI / ML</span>
+                <h3>Visual Waste Recognition</h3>
+                <p>Camera-based waste image analysis to assist composition detection, contamination flags, and category tagging; currently in pilot deployments.</p>
+            </div>
+            <div class="tech-card reveal">
+                <span class="tech-badge badge-iot">IoT</span>
+                <h3>Sensor Analysis Network</h3>
+                <p>Multi-parameter monitoring: weight, density, temperature, humidity, gas levels. Simulated and live
+                    sensor modes with automatic alert triggers.</p>
+            </div>
+            <div class="tech-card reveal">
+                <span class="tech-badge badge-route">Route AI</span>
+                <h3>4-Algorithm Optimization</h3>
+                <p>Nearest Neighbor, Genetic Algorithm, Ant Colony Optimization, and Simulated Annealing — automatically
+                    selecting the best strategy for each route.</p>
+            </div>
+            <div class="tech-card reveal">
+                <span class="tech-badge badge-cloud">Cloud</span>
+                <h3>Scalable API Architecture</h3>
+                <p>46+ REST endpoints with JWT security, multi-tenancy, rate limiting, and role-based access.
+                    WebSocket-ready for real-time dashboard updates.</p>
+            </div>
+            <div class="tech-card reveal">
+                <span class="tech-badge badge-ai">Analytics</span>
+                <h3>Predictive Intelligence</h3>
+                <p>Forecast pickup schedules, predict cost savings, detect contamination patterns, and surface market
+                    opportunities from historical data.</p>
+            </div>
+            <div class="tech-card reveal">
+                <span class="tech-badge badge-iot">Geospatial</span>
+                <h3>Live Fleet Tracking</h3>
+                <p>Real-time map visualization of all trucks, stations, and routes. Geospatial queries for nearby
+                    stations and optimal pickup clustering.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMPLIANCE -->
+    <section id="compliance">
+        <div class="reveal">
+            <div class="compliance-inner">
+                <div class="section-header" style="margin-bottom:0;">
+                    <span class="section-tag">Regulatory Compliance</span>
+                    <h2>Automated Compliance. Zero Effort.</h2>
+                    <p class="section-desc">IWLI automatically generates all required regulatory documentation, so your
+                        team focuses on operations — not paperwork.</p>
+                </div>
+                <div class="compliance-grid">
+                    <div class="compliance-item">
+                        <div class="compliance-icon">🏛️</div>
+                        <h4>CPCB Reports</h4>
+                        <p>Quarterly Central Pollution Control Board submissions generated automatically.</p>
+                    </div>
+                    <div class="compliance-item">
+                        <div class="compliance-icon">📍</div>
+                        <h4>SPCB Reports</h4>
+                        <p>State Pollution Control Board compliance documentation, always up to date.</p>
+                    </div>
+                    <div class="compliance-item">
+                        <div class="compliance-icon">🌱</div>
+                        <h4>ESG Metrics</h4>
+                        <p>Environmental, Social, and Governance data ready for investor reporting and audits.</p>
+                    </div>
+                    <div class="compliance-item">
+                        <div class="compliance-icon">📊</div>
+                        <h4>Waste Audit Scores</h4>
+                        <p>Full audit trails with quality scores, contamination records, and certification tracking.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- USE CASES -->
+    <section id="use-cases">
+        <div class="section-header reveal">
+            <span class="section-tag">Use Cases</span>
+            <h2>Who Uses IWLI</h2>
+            <p class="section-desc">Designed for every stakeholder in the industrial waste value chain.</p>
+        </div>
+        <div class="usecase-grid">
+            <div class="usecase-card reveal">
+                <div class="usecase-icon">🏭</div>
+                <h3>Factory Operations</h3>
+                <ul>
+                    <li>Real-time bin monitoring</li>
+                    <li>Automated pickup scheduling</li>
+                    <li>Cost tracking & optimization</li>
+                    <li>Compliance reporting</li>
+                </ul>
+            </div>
+            <div class="usecase-card reveal">
+                <div class="usecase-icon">🚛</div>
+                <h3>Waste Management Companies</h3>
+                <ul>
+                    <li>Multi-site monitoring</li>
+                    <li>Fleet route optimization</li>
+                    <li>Customer dashboards</li>
+                    <li>Revenue insights</li>
+                </ul>
+            </div>
+            <div class="usecase-card reveal">
+                <div class="usecase-icon">📋</div>
+                <h3>Compliance Officers</h3>
+                <ul>
+                    <li>ESG reporting</li>
+                    <li>Regulatory documentation</li>
+                    <li>Audit trails</li>
+                    <li>Certifications</li>
+                </ul>
+            </div>
+            <div class="usecase-card reveal">
+                <div class="usecase-icon">📈</div>
+                <h3>Executives & Investors</h3>
+                <ul>
+                    <li>KPI dashboards</li>
+                    <li>ROI tracking</li>
+                    <li>Cost savings reports</li>
+                    <li>Market opportunities</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section id="cta">
+        <h2 class="reveal">Ready to <span style="color:var(--neon-green)">Transform</span> Your Waste Operations?</h2>
+        <p class="reveal">Book a demo and see how IWLI can reduce costs, ensure compliance, and cut your carbon
+            footprint — starting in 90 days.</p>
+        <form class="cta-form reveal" id="demo-form" method="POST" action="https://formspree.io/f/xwvawzqw">
+            <input class="cta-input" type="text" name="name" placeholder="Your Name" required />
+            <input class="cta-input" type="tel" name="phone" placeholder="Contact Number" required />
+            <input class="cta-input" type="text" name="city" placeholder="City" required />
+            <input class="cta-input" type="email" name="email" placeholder="Your Email" required />
+            <button type="submit" class="btn-primary" style="border:none;cursor:pointer;width:100%;">Book Demo
+                🚀</button>
+        </form>
+        <div id="form-status"
+            style="font-size:0.78rem;color:var(--text-muted);margin-top:1rem;display:none;text-align:center;"></div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-inner">
+            <span class="footer-logo">IWLI</span>
+            <div class="footer-links">
+                <a href="#features">Features</a>
+                <a href="#how-it-works">How It Works</a>
+                <a href="#waste-types">Waste Types</a>
+                <a href="#technology">Technology</a>
+                <a href="#impact">Impact</a>
+                <a href="#use-cases">Use Cases</a>
+                <a href="#cta">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ROBOT ASSISTANT -->
+    <div id="robot-assistant">
+        <button id="robot-button" title="IWLI AI Assistant">
+            🤖
+        </button>
+
+        <div id="robot-panel">
+            <h4>IWLI AI Robot</h4>
+            <p>Optimizing routes, monitoring bins, and generating compliance reports in real-time...</p>
+            <ul>
+                <li>✓ Checking sensor data 👁️</li>
+                <li>✓ Running route optimization 🧠</li>
+                <li>✓ Preparing compliance summary 📄</li>
+            </ul>
+            <button id="robot-close">Close</button>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX', {
+            'anonymize_ip': true,
+            'allow_google_signals': false
+        });
+    </script>
+
+    <!-- Form Handler & Robot Assistant -->
+    <script>
+        // Form submission handler
+        document.getElementById('demo-form')?.addEventListener('submit', function (e) {
+            const statusDiv = document.getElementById('form-status');
+            statusDiv.style.display = 'block';
+            statusDiv.textContent = '✓ Sending your inquiry...';
+            statusDiv.style.color = 'var(--neon-green)';
+        });
+
+        // Robot assistant
+        const robotButton = document.getElementById('robot-button');
+        const robotPanel = document.getElementById('robot-panel');
+        const robotClose = document.getElementById('robot-close');
+
+        robotButton?.addEventListener('click', function () {
+            robotPanel?.classList.toggle('show');
+        });
+
+        robotClose?.addEventListener('click', function () {
+            robotPanel?.classList.remove('show');
+        });
+
+        // Close panel when clicking outside
+        document.addEventListener('click', function (e) {
+            if (!e.target.closest('#robot-assistant')) {
+                robotPanel?.classList.remove('show');
+            }
+        });
+    </script>
+
+</body>
+
+</html>

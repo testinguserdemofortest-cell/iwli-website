@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="../css/styles.css"/>
+<title>IWLI Waste Types - AI Waste Classification</title>
+</head>
+<body>
+<!-- NAV -->
+<nav>
+<span class="nav-logo">IWLI</span>
+<button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
+<ul class="nav-links">
+<li><a href="index.html">Home</a></li>
+<li><a href="features.html">Features</a></li>
+<li><a href="how-it-works.html">How It Works</a></li>
+<li><a href="#waste-types">Waste Types</a></li>
+<li><a href="technology.html">Technology</a></li>
+<li><a href="impact.html">Impact</a></li>
+<li><a href="compliance.html">Compliance</a></li>
+<li><a href="use-cases.html">Use Cases</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</nav>
+
+<canvas id="particles-canvas"></canvas>
+
+<section id="waste-types">
+<div class="section-header reveal">
+<span class="section-tag">Classification</span>
+<h2>Industrial Waste Classification</h2>
+<p class="section-desc">IWLI's AI engine identifies and manages all 11+ industrial waste types across three major categories.</p>
+</div>
+<div class="waste-grid">
+<div class="waste-card reveal">
+<div class="waste-category cat-hazardous">⚠ Hazardous</div>
+<h4>Chemical Waste</h4>
+<p>Solvents, acids, bases, and reactive compounds requiring special handling and disposal protocols.</p>
+</div>
+<div class="waste-card reveal">
+<div class="waste-category cat-hazardous">⚠ Hazardous</div>
+<h4>Electronic Waste</h4>
+<p>Circuit boards, batteries, and electronic components with heavy metals and toxic materials.</p>
+</div>
+<div class="waste-card reveal">
+<div class="waste-category cat-hazardous">⚠ Hazardous</div>
+<h4>Radioactive Waste</h4>
+<p>Low and medium-level radioactive materials from industrial processes, tracked with strict compliance.</p>
+</div>
+<div class="waste-card reveal">
+<div class="waste-category cat-industrial">◈ Industrial</div>
+<h4>Scrap Metal</h4>
+<p>Ferrous and non-ferrous metals with real-time market rate tracking and buyer matching.</p>
+</div>
+<div class="waste-card reveal">
+<div class="waste-category cat-industrial">◈ Industrial</div>
+<h4>Packaging Waste</h4>
+<p>Plastics, cardboard, and composite packaging materials classified for recycling or disposal.</p>
+</div>
+<div class="waste-card reveal">
+<div class="waste-category cat-industrial">◈ Industrial</div>
+<h4>Construction Debris</h4>
+<p>Concrete, brick, tiles, and demolition materials handled with compliant disposal routing.</p>
+</div>
+<div class="waste-card reveal">
+<div class="waste-category cat-industrial">◈ Industrial</div>
+<h4>Textile & Wood</h4>
+<p>Industrial offcuts and fabric waste from manufacturing tracked for recycling and energy recovery.</p>
+</div>
+<div class="waste-card reveal">
+<div class="waste-category cat-organic">✦ Organic</div>
+<h4>Food & Organic</h4>
+<p>Biodegradable waste from processing facilities, routed for composting or biogas conversion.</p>
+</div>
+<div class="waste-card reveal">
+<div class="waste-category cat-organic">✦ Organic</div>
+<h4>Recyclable Materials</h4>
+<p>Mixed recyclables sorted and tracked by material composition and market value.</p>
+</div>
+<div class="waste-card reveal">
+<div class="waste-category cat-organic">✦ Organic</div>
+<h4>Composite Waste</h4>
+<p>Multi-material items requiring pre-processing before recycling or certified disposal.</p>
+</div>
+</div>
+</section>
+
+<script src="../js/script.js"></script>
+</body>
+</html>

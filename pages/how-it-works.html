@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="../css/styles.css"/>
+<title>IWLI How It Works - AI Waste Automation</title>
+</head>
+<body>
+<!-- NAV -->
+<nav>
+<span class="nav-logo">IWLI</span>
+<button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
+<ul class="nav-links">
+<li><a href="index.html">Home</a></li>
+<li><a href="features.html">Features</a></li>
+<li><a href="#how-it-works">How It Works</a></li>
+<li><a href="waste-types.html">Waste Types</a></li>
+<li><a href="technology.html">Technology</a></li>
+<li><a href="impact.html">Impact</a></li>
+<li><a href="compliance.html">Compliance</a></li>
+<li><a href="use-cases.html">Use Cases</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</nav>
+
+<canvas id="particles-canvas"></canvas>
+
+<section id="how-it-works">
+<div class="section-header reveal">
+<span class="section-tag">Process</span>
+<h2>How IWLI Works</h2>
+<p class="section-desc">A seamless end-to-end workflow from sensor data collection to compliance reporting.</p>
+</div>
+<div class="steps">
+<div class="step reveal">
+<div class="step-num">01</div>
+<div>
+<h3>IoT Sensors Collect Data</h3>
+<p>Smart sensors on industrial bins continuously monitor fill levels, weight, temperature, humidity, and contamination. Data is streamed to the IWLI platform in near real-time (configurable, e.g. every 30–60 seconds).</p>
+</div>
+</div>
+<div class="step reveal">
+<div class="step-num">02</div>
+<div>
+<h3>AI Classifies & Analyzes</h3>
+<p>The OpenAI-powered engine classifies waste types (Hazardous, Industrial, Organic), detects contamination, calculates purity scores, and generates actionable recommendations for your operations team.</p>
+</div>
+</div>
+<div class="step reveal">
+<div class="step-num">03</div>
+<div>
+<h3>Alerts Are Generated Automatically</h3>
+<p>When thresholds are crossed — overfill, contamination, temperature or gas anomalies — the system generates severity-graded alerts (Low, Medium, High, Critical) and notifies the right personnel instantly.</p>
+</div>
+</div>
+<div class="step reveal">
+<div class="step-num">04</div>
+<div>
+<h3>Routes Are Optimized</h3>
+<p>Pickup routes for waste collection trucks are automatically optimized using advanced algorithms. The system tracks live fleet positions, calculates CO₂ savings, and logs distance and fuel efficiency per route.</p>
+</div>
+</div>
+<div class="step reveal">
+<div class="step-num">05</div>
+<div>
+<h3>Reports Are Generated</h3>
+<p>Compliance documents for CPCB/SPCB regulators, ESG impact reports, and ROI summaries are generated automatically — ready to export as CSV or PDF at any time.</p>
+</div>
+</div>
+</div>
+</section>
+
+<script src="../js/script.js"></script>
+</body>
+</html>
