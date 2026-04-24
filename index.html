@@ -79,12 +79,21 @@
             position: absolute;
             bottom: 80px;
             right: 0;
-            background: var(--bg-card);
+            background: rgba(5, 10, 20, 0.98);
+            backdrop-filter: blur(12px);
             border: 1px solid var(--border);
             border-radius: 12px;
             padding: 20px;
             width: 280px;
             color: var(--text-primary);
+        }
+
+        @media (max-width: 480px) {
+            #robot-panel {
+                width: 260px;
+                right: 10px;
+                padding: 16px;
+            }
         }
 
         #robot-panel.show {

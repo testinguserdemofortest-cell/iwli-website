@@ -1,4 +1,4 @@
-nio*, *::before, *::after {
+pnio*, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -72,38 +72,30 @@ nav {
 
 .nav-links {
   display: flex;
-  gap: 2rem;
+  gap: 1rem;
   list-style: none;
+  align-items: center;
 }
 
 .nav-links a {
-  color: var(--text-muted);
+  color: #0a0e17;
   text-decoration: none;
-  font-size: 0.88rem;
-  font-weight: 500;
+  font-size: 0.78rem;
+  font-weight: 700;
   letter-spacing: 0.5px;
   transition: all 0.3s ease;
   position: relative;
-  padding: 4px 8px;
-}
-
-.nav-links a::after {
-  content: '';
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: linear-gradient(90deg, var(--neon-green), var(--neon-blue));
-  transition: width 0.3s ease;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--neon-green) 0%, var(--neon-blue) 100%);
+  box-shadow: 0 0 18px rgba(0, 255, 136, 0.4), 0 4px 12px rgba(0, 212, 255, 0.2);
+  border: 1px solid rgba(0, 255, 136, 0.3);
 }
 
 .nav-links a:hover {
-  color: var(--neon-green);
-}
-
-.nav-links a:hover::after {
-  width: 100%;
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 0 30px rgba(0, 255, 136, 0.7), 0 8px 24px rgba(0, 212, 255, 0.3);
+  border-color: rgba(0, 255, 204, 0.6);
 }
 
 .nav-cta {
@@ -343,7 +335,11 @@ h3.glitch-hover::after {
 
 .hero-sub {
   font-size: clamp(1rem, 2vw, 1.2rem);
-  color: var(--text-muted);
+  background: linear-gradient(90deg, var(--neon-purple), var(--neon-blue));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 600;
   max-width: 640px;
   margin: 0 auto 2.5rem;
   animation: fadeUp 0.6s 0.2s ease both;
@@ -428,51 +424,26 @@ h3.glitch-hover::after {
   font-family: 'Orbitron', monospace;
   font-size: 2rem;
   font-weight: 700;
-  background: linear-gradient(135deg, var(--neon-green), var(--neon-blue));
+  background: linear-gradient(135deg, var(--neon-purple), var(--neon-blue));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  text-shadow: 0 0 20px rgba(0,255,136,0.5);
-  filter: drop-shadow(0 0 12px rgba(0,255,136,0.3));
+  text-shadow: 0 0 20px rgba(168, 85, 247, 0.5);
+  filter: drop-shadow(0 0 12px rgba(168, 85, 247, 0.3));
 }
 
 .stat-label {
   font-size: 0.78rem;
-  color: var(--text-muted);
-  letter-spacing: 1px;
-  margin-top: 4px;
-}
-
-/* Robotics stat special styling */
-.hero-stats .stat:nth-child(5) .stat-number {
-  font-family: system-ui, sans-serif;
-  font-size: 2.8rem;
-  background: none;
-  -webkit-text-fill-color: unset;
-  background-clip: unset;
-  -webkit-background-clip: unset;
-  text-shadow: 0 0 20px rgba(168, 85, 247, 0.5), 0 0 40px rgba(168, 85, 247, 0.2);
-  filter: drop-shadow(0 0 16px rgba(168, 85, 247, 0.4));
-  animation: roboticsFloat 3s ease-in-out infinite;
-}
-
-.hero-stats .stat:nth-child(5) .stat-label {
   background: linear-gradient(90deg, var(--neon-purple), var(--neon-blue));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   font-weight: 600;
   letter-spacing: 0.5px;
+  margin-top: 4px;
 }
 
-@keyframes roboticsFloat {
-  0%, 100% {
-    transform: translateY(0px) rotateZ(0deg);
-  }
-  50% {
-    transform: translateY(-12px) rotateZ(5deg);
-  }
-}
+
 
 /* ── SECTION COMMON ── */
 .section-header {
@@ -508,7 +479,11 @@ h2 {
 }
 
 .section-desc {
-  color: var(--text-muted);
+  background: linear-gradient(90deg, var(--neon-purple), var(--neon-blue));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 600;
   max-width: 580px;
   margin: 0 auto;
   font-size: 1rem;
@@ -597,7 +572,11 @@ h2 {
 
 .before-card li, .after-card li {
   font-size: 0.88rem;
-  color: var(--text-muted);
+  background: linear-gradient(90deg, var(--neon-purple), var(--neon-blue));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 600;
   padding: 8px 0;
   padding-left: 1.4rem;
   position: relative;
@@ -668,7 +647,11 @@ h2 {
 .persona-before {
   background: rgba(255, 77, 77, 0.05);
   border-left: 3px solid #ff4d4d;
-  color: var(--text-muted);
+  background: linear-gradient(90deg, var(--neon-purple), var(--neon-blue));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 600;
 }
 
 .persona-after {
@@ -735,7 +718,11 @@ h2 {
 
 .feature-card p {
   font-size: 0.9rem;
-  color: var(--text-muted);
+  background: linear-gradient(90deg, var(--neon-purple), var(--neon-blue));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 600;
   line-height: 1.7;
 }
 
@@ -785,7 +772,11 @@ h2 {
 }
 
 .step p {
-  color: var(--text-muted);
+  background: linear-gradient(90deg, var(--neon-purple), var(--neon-blue));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 600;
   font-size: 0.92rem;
 }
 
@@ -846,7 +837,11 @@ h2 {
 
 .waste-card p {
   font-size: 0.83rem;
-  color: var(--text-muted);
+  background: linear-gradient(90deg, var(--neon-purple), var(--neon-blue));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 600;
 }
 
 /* ── IMPACT ── */
@@ -906,7 +901,11 @@ h2 {
 
 .impact-label {
   font-size: 0.82rem;
-  color: var(--text-muted);
+  background: linear-gradient(90deg, var(--neon-purple), var(--neon-blue));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 600;
   margin-top: 0.5rem;
   letter-spacing: 0.5px;
 }
@@ -986,7 +985,11 @@ h2 {
 
 .tech-card p {
   font-size: 0.87rem;
-  color: var(--text-muted);
+  background: linear-gradient(90deg, var(--neon-purple), var(--neon-blue));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 600;
   line-height: 1.7;
 }
 
@@ -1037,7 +1040,11 @@ h2 {
 
 .compliance-item p {
   font-size: 0.82rem;
-  color: var(--text-muted);
+  background: linear-gradient(90deg, var(--neon-purple), var(--neon-blue));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 600;
 }
 
 /* ── USE CASES ── */
@@ -1087,7 +1094,11 @@ h2 {
 
 .usecase-card li {
   font-size: 0.85rem;
-  color: var(--text-muted);
+  background: linear-gradient(90deg, var(--neon-purple), var(--neon-blue));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 600;
   padding: 3px 0;
   padding-left: 1.2rem;
   position: relative;
@@ -1113,7 +1124,11 @@ h2 {
 }
 
 #cta p {
-  color: var(--text-muted);
+  background: linear-gradient(90deg, var(--neon-purple), var(--neon-blue));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 600;
   max-width: 500px;
   margin: 0 auto 2.5rem;
 }
@@ -1483,4 +1498,3 @@ footer {
   background: rgba(0, 255, 204, 0.08);
   animation: pulseGlow 1s infinite;
 }
-
