@@ -1,10 +1,13 @@
-# Chatbot Mobile Transparency Fix
+# Task Progress
+
+## Goal
+- Remove color styling from 🤖 emoji in hero stats
+- Change purple text to green for big headings: Dozens of, AI-powered, 100 %, Dozens of
 
 ## Steps
-- [x] 1. Identify issue: `#robot-panel` uses `var(--bg-card)` = `rgba(15, 25, 45, 0.4)` which is 40% transparent
-- [x] 2. Update `index.html` inline styles:
-  - Changed `#robot-panel` background to solid `rgba(5, 10, 20, 0.98)`
-  - Added `backdrop-filter: blur(12px)`
-  - Added mobile `@media (max-width: 480px)` rule for width and positioning
-- [x] 3. Restart frontend and verify
+- [x] Step 1: Add `stat-emoji` class to 🤖 stat-number in index.html
+- [x] Step 2: Update `.stat-number` CSS to use green instead of purple
+- [x] Step 3: Add `.stat-number.stat-emoji` override to remove color effects from 🤖
+- [x] Step 4: Verify edits look correct
+
 
